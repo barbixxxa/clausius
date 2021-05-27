@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Clausius</title>
+    <script src="clausius.js"></script>
+</head>
+
+<body>
+    <div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Password</span>
+            <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                aria-describedby="basic-addon1" id="input-password">
+            <input class="form-check-input me-1" type="checkbox" id="checkbox-password" onclick="show_password()">
+            Show password
+        </div>
+        <div>
+            <button type="button" class="btn btn-dark" onclick="calculate_passwd_entropy()">Calculate</button>
+        </div>
+        <div id="text-response">
+            <p class="text-center" id="password-response"></p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
