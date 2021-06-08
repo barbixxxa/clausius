@@ -26,7 +26,26 @@
         <div id="text-response">
             <p class="text-center" id="password-response"></p>
         </div>
+    </div>
 
+    <div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Lenght</span>
+            <input type="number" class="form-control" placeholder="Lenght" aria-label="Lenght"
+                aria-describedby="basic-addon1" id="input-entropy-lenght">
+            <input class="form-check-input me-1" type="checkbox" id="checkbox-entropy-digit">Digits
+            <input class="form-check-input me-1" type="checkbox" id="checkbox-entropy-lowchar">Lower Case Letters
+            <input class="form-check-input me-1" type="checkbox" id="checkbox-entropy-upperchar">Upper Case Letters
+            <input class="form-check-input me-1" type="checkbox" id="checkbox-entropy-special">Special Characters
+            <input class="form-check-input me-1" type="checkbox" id="checkbox-entropy-specialPlus">Other Characters
+            <input class="form-check-input me-1" type="checkbox" id="checkbox-entropy-space">Space
+        </div>
+        <div>
+            <button type="button" class="btn btn-dark" onclick="calculate_entropy()">Calculate</button>
+        </div>
+        <div id="text-response">
+            <p class="text-center" id="entropy-response"></p>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

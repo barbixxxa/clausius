@@ -83,3 +83,41 @@ function show_password() {
         inputPassword.type = "password";
     }
 }
+
+function calculate_entropy() {
+    var text = ''
+    var chars = 0
+    var length = document.getElementById("input-entropy-lenght")
+    var lowercaseCheckbox = document.getElementById("checkbox-entropy-lowchar")
+    var uppercaseCheckbox = document.getElementById("checkbox-entropy-upperchar")
+    var digitCheckbox = document.getElementById("checkbox-entropy-digit")
+    var specialCheckbox = document.getElementById("checkbox-entropy-special")
+    var specialPlusCheckbox = document.getElementById("checkbox-entropy-specialPlus")
+    var spaceCheckbox = document.getElementById("checkbox-entropy-space")
+
+    if (lowercaseCheckbox.checked) {
+        chars += 26;
+    }
+    if (uppercaseCheckbox.checked) {
+        chars += 26;
+    }
+    if (digitCheckbox.checked) {
+        chars += 10;
+    }
+    if (specialCheckbox.checked) { //'!@#$%^&*()'
+        chars += 10;
+    }
+    if (specialPlusCheckbox.checked) { //"`~-_=+[{]}\\|;:'\",<.>/?"
+        chars += 22;
+    }
+    if (spaceCheckbox.checked) {
+        chars += 1;
+    }
+    /*if (others == 0 && (c < ' ' || c > '~')) {
+        chars += 32 + 128;
+        others = 1;
+    }*/
+
+    text += '<li><b><u>Entropy: ' + (Math.round(Math.log2(Math.pow(chars, length.value)) * 100) / 100) + ' bits';
+    document.getElementById("entropy-response").innerHTML = text;
+}
