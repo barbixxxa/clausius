@@ -39,7 +39,7 @@ function calculate_passwd_entropy() {
         }
     }
 
-    text += '<li><b><u>Entropy: ' + (Math.round(Math.log2(Math.pow(chars, length)) * 100) / 100) + '</u></li><li>Charset Size: ' + chars +
+    text += '<li><b><u>Entropy: ' + (Math.round(Math.log2(Math.pow(chars, length)) * 100) / 100) + ' bits</u></li><li>Charset Size: ' + chars +
         '</li><li>Length: ' + length + '</li></b>';
 
 
